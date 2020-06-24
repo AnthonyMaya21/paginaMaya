@@ -1,0 +1,98 @@
+
+body {
+background-image: url("fondo3.jpg");
+  background-color: #cccccc;
+  height: 1000px;
+  background-position: center;
+
+  background-size: cover;
+  position: relative;
+
+}
+
+.stroke {
+
+color: #000;
+
+font-family: impact;
+
+letter-spacing: 4px;
+text-shadow: -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff;
+}
+
+html {font-family: sans-serif; }
+
+body{
+
+  text-align: center;
+
+  
+}
+
+label, legend {font-weight: bold
+
+
+
+
+}
+*:required, .obligatorio {border: thin solid blue}
+input[type=number], .numero {text-align: right}
+dfn {font-weight: bold}
+
+br + output, fieldset + output, footer, form em {font-size: small}
+/* El contenido de un fieldset está más cercano que el normal. */
+fieldset p {margin: 0}
+fieldset label, label * {font-weight: normal}
+.error {color: red}
+
+
+p
+{
+
+font-family:'Comic Sans MS';
+    font-size: 110%;
+    line-height: 24px;
+    color:#000;
+    height: 70px;
+    width: 1071px;
+    
+    letter-spacing: 4px;
+text-shadow: -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff;
+
+}
+
+h1{
+font-family:'Comic Sans MS';
+
+    color:#000;
+    height: 59px;
+    width: 1071px;
+letter-spacing: 4px;
+text-shadow: -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff;
+
+
+}
+
+h2{
+  font-family:'Comic Sans MS';
+   text-align: center;
+font-size: x-large;
+    height: 15px;
+    width: 1071px;
+}
+
+
+
+
+ .labeles{
+
+font-family:'Comic Sans MS';
+    font-size: 110%;
+    line-height: 24px;
+    color:#000;
+  
+    
+    letter-spacing: 4px;
+text-shadow: -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff;
+
+ }

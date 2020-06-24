@@ -1,0 +1,66 @@
+
+
+html {font-family: sans-serif; }
+
+
+
+body {
+background-image: url("fondo2.jpg");
+  background-color: #cccccc;
+  height: 800px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+
+label, legend {font-weight: bold; color:#628CA2}
+*:required, .obligatorio {border: thin solid blue}
+input[type=number], .numero {text-align: right}
+dfn {font-weight: bold}
+
+br + output, fieldset + output, footer, form em {font-size: small}
+
+fieldset p {margin: 0}
+fieldset label, label * {font-weight: normal}
+.error {color: red}
+
+p
+{
+font-family:'Comic Sans MS';
+    line-height: 24px;
+    color:#628CA2;
+    height: 15px;
+    width: 1071px;
+    text-align: left;
+
+}
+
+h1{
+	font-family:'Comic Sans MS';
+  
+    color:#93BBD0;
+    height: 59px;
+    width: 1071px;
+}
+
+ul{
+
+font-family:'Comic Sans MS';
+    
+    color:#628CA2;
+   
+    text-align: left;
+
+}
+
+.parrafos{
+
+font-family:'Comic Sans MS';
+   
+    color:#628CA2;
+  
+
+}
