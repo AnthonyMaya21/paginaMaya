@@ -62,7 +62,7 @@
 <br>
 
 
-    <form id="forma" >
+    <form id="forma" class="needs-validation">
     
 <div class="container">
   <div class="row">
@@ -70,22 +70,23 @@
       
          <label class="labeles" accesskey="N">
          Nombre(s):
-          <input name="Nombre" id="Name" class="form-control" type="text" autofocus required="required">
+          <input name="Nombre" id="Name" class="form-control  " type="text" autofocus required>
               <label id="mensajeNombre" class="mensajeErroneo"></label>
+
         </label>
       
     </div>
     <div class="col-sm">
  <label class="labeles"  accesskey="N">
          Apellido Paterno:
-          <input class="form-control" id="lastName" name="ap" type="text" autofocus required="required">
+          <input class="form-control" id="lastName" name="ap" type="text" autofocus required>
            <label id="mensajeApellidoPaterno" class="mensajeErroneo"></label>
         </label>
     </div>
     <div class="col-sm">
       <label class="labeles"  accesskey="N">
          Apellido Materno:
-          <input class="form-control" id="apm"  name="ap" type="text" autofocus required="required">
+          <input class="form-control" id="apm"  name="ap" type="text" autofocus required>
            <label id="mensajeApellidoMaterno" class="mensajeErroneo"></label>
         </label>
     </div>
@@ -100,16 +101,18 @@
     <div class="col-sm">
        <label class="labeles"   accesskey="F">
          Fecha de nacimiento: 
-          <input name="fecha" type="date" autofocus required="required" >
+          <input name="fecha" id="fecha" type="date" autofocus required="required" >
+           <label id="mensajeFecha" class="mensajeErroneo"></label>
         </label>
     </div>
     <div class="col-sm">
       <label class="labeles" accesskey="E">
          Telefono:
-          <input name="telefono" type="tel"  class="numero" required="required" pattern="[0-9]+"
+          <input name="telefono" id="tel" type="tel"  class="numero" required="required" pattern="[0-9]+"
                  placeholder="De 8 a 10 caracteres"  minlength="8" maxlength="10"
                  
                   >
+                  <label id="mensajeTel" class="mensajeErroneo"></label>
         </label>
     </div>
    
@@ -134,13 +137,13 @@
     <label class="labeles">Sexo: </label>
     </div>
     <div class="col-sm">
- <input type="radio" id="fem" value="F" name="sexo" class="form-check-input"> 
+ <input type="radio" id="fem" value="F" name="sexo" class="form-check-input" required> 
                <label  class="labeles" for="fem" >Femenino</label>
             &nbsp;
              &nbsp;
               &nbsp;
              &nbsp;
-               <input type="radio" id="mas" value="M" name="sexo" class="form-check-input">
+               <input type="radio" id="mas"  value="M" name="sexo" class="form-check-input">
                <label  class="labeles" for="mas" >Masculino</label>  
     </div>
     <div class="col-sm">
@@ -157,9 +160,9 @@
   <div class="row">
     <div class="col">
      
-        <label for="BeatleFav" class="labeles" required="required"> Mi disco favorito es:</label>
-            <select id="fav" class="custom-select"  >
-              <option selected value="peliculas">Beatle favorito</option>
+        <label for="BeatleFav" class="labeles" > Mi disco favorito es:</label>
+            <select id="fav" class="custom-select" required >
+              <option selected value="">Beatle favorito</option>
                <option value="John_Lennon">Juan lennon</option>
                <option value="Paul_Mccartney ">Pablo Mccartney</option>
                <option value="George_Harrison">Jorge Harrison</option>
@@ -167,11 +170,12 @@
   
             </select>
 
-    </div>
+          </div>
+
     <div class="col">
-      <label for="BeatleFav" class="labeles" required="required" > Mi disco favorito es:</label>
-            <select id="fav" class="custom-select" >
-              <option selected value="peliculas">Disco favorito</option>
+      <label for="BeatleFav" class="labeles"  > Mi disco favorito es:</label>
+            <select id="fav" class="custom-select" required >
+              <option selected value="">Disco favorito</option>
                <option value="PPM">Please Please Me</option>
                <option value="AB">Abbey Road</option>
                <option value="SGT">Sgt pepper's lonely hearts club band</option>
@@ -195,7 +199,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-     <button class="btn btn-info" onclick="saludar()"><i class="fas fa-save"></i> Guardar</button>
+     <button class="btn btn-info" type="submit" onclick="saludar()"><i class="fas fa-save"></i>Saludar</button>
+     <button  class="btn btn-success" type="submit" ><i class="fas fa-save"></i> Guardar</button>
       <button type="reset" class="btn btn-danger">Borrar</button>
    
   </div>
@@ -208,6 +213,31 @@
     </form>
   
     <script src="js/style.js"></script>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+} ) ();
+</script>
+
+
+
+
   </body>
 </html>
 

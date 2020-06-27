@@ -1,5 +1,6 @@
 
 let letrasPattern=/^[A-Za-zÁáÉéÍíÓóÚúÑñ]+$/;
+let letrasNumbers=/^[0-9]*$/;
 
 
 document.getElementById("lastName").addEventListener("focusout",function(){ // funciones callback     
@@ -41,7 +42,7 @@ document.getElementById("Name").addEventListener("focusout",function(){
 document.getElementById("apm").addEventListener("focusout",function(){ 
    
     let elementoMensajeN = document.getElementById("mensajeApellidoMaterno");
-    let apem = document.getElementById("Name").value;
+    let apem = document.getElementById("apm").value;
     if(apem.length == 0){
         elementoMensajeN.innerHTML = "Debes de poner tu Apellido";
     }else{
@@ -56,12 +57,56 @@ document.getElementById("apm").addEventListener("focusout",function(){
 });
 
 
+
+
+document.getElementById("fecha").addEventListener("focusout",function(){ 
+   
+    let elementoMensajeN = document.getElementById("mensajeFecha");
+    let apem = document.getElementById("fecha").value;
+    if(apem.length == 0){
+        elementoMensajeN.innerHTML = "Debes escribir una fecha";
+    }else{
+       
+        elementoMensajeN.innerHTML = "";
+
+
+    }
+});
+
+document.getElementById("tel").addEventListener("focusout",function(){ 
+   
+    let elementoMensajeN = document.getElementById("mensajeTel");
+    let apem = document.getElementById("tel").value;
+    if(apem.length == 0){
+        elementoMensajeN.innerHTML = "Debes de poner tu telefono";
+    }else{
+        elementoMensajeN.innerHTML = "";
+        let correctoape = letrasNumbers.test(apem);
+        if(correctoape == false){
+            elementoMensajeN.innerHTML = "Solo se pueden numeros";
+        }else{
+            elementoMensajeN.innerHTML = "";
+        }
+    }
+});
+
+
   function saludar(){
         /*Las funciones no se llaman en automático se tiene
         que llamar desde un evento*/
-        let nombre = document.getElementById("Name").value;
-        alert("Bienvenido al registro " + nombre);
+        let nombre = document.getElementById("Name").value; 
+        if(nombre ==="")
+        {
+                 alert("Escribe tu nombre " + nombre);
+        }
+
+        else {
+                alert("Bienvenido al registro " + nombre);
+        }
+    
 
     }
 
  
+
+    

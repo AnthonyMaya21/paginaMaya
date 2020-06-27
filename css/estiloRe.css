@@ -10,6 +10,8 @@ background-image: url("fondo3.jpg");
 
 }
 
+*:required, .obligatorio{border-color: : red}
+
 .stroke {
 
 color: #000;
