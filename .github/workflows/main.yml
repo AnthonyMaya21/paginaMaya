@@ -1,0 +1,29 @@
+name: Ejemplo de continue-on-error
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Paso exitoso
+        run: echo "Este paso se ejecutó exitosamente"
+
+  job2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Paso que falla
+        run: exit 1
+        continue-on-error: true
+
+  job3:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Paso después de un error
+        run: echo "Este paso se ejecuta aunque el paso anterior haya fallado"
