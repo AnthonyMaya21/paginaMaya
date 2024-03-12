@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Paso 1
-        run: exit 1
+        run: echo "Hola mundo"
 
       - name: Paso 2
         if: ${{ failure() }}
