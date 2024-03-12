@@ -1,0 +1,17 @@
+name: Ejemplo de GitHub Actions con dependencia de paso y condición
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Paso 1
+        run: exit 1
+
+      - name: Paso 2
+        if: ${{ failure() }}
+        run: echo "Este es el paso 2 y se ejecutará solo si el Paso 1 falla"
